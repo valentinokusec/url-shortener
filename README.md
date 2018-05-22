@@ -6,5 +6,5 @@ Pokretanje
 2. Pokrenuti naredbu java -jar url-shortener.jar
 
 
-Swagger
-1. Popis svih endpointova mozete naci na: http://localhost:8080/help
+Help
+1. Help stranica: http://localhost:8080/help
