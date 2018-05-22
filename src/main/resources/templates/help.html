@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Url Shortener</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Url Shortener</h2>
+	<h3>Instalacija</h3>
+	<p>
+		1. Skinuti jar file u zeljeni direktorij <br /> 
+	</p>
+
+	<h3>Pokretanje</h3>
+	<p>
+		1. Postaviti se nad direktorijem gdje se nalazi jar file <br /> 2.
+		Pokrenuti naredbu java -jar url-shortener.jar
+	</p>
+	<h3>Korištenje</h3>
+	<p>
+		Kreiranje Accounta 	<br />
+		POST - localhost:8080/account	<br />
+			-body	<br />
+				{	<br />
+					"accountId" : "test"	<br />
+				}	<br />
+			-response	<br />
+			{	<br />
+			    "success": true,	<br />
+			    "description": "Account created!",	<br />
+			    "password": "UfldMfBZ"	<br />
+			}	<br />
+		Registracija URL-a	<br />
+		POST - localhost:8080/url	<br />
+			-body	<br />
+			{	<br />
+				"url" : "http://www.stackoverflow.com",	<br />
+				"type" : 302	<br />
+			}	<br />
+			-response	<br />
+				{	<br />
+				    "url": "localhost:8080/url/shorturl/GJNXKZHvbF"	<br />
+				}	<br />
+		Pregled Statistike	<br />
+		GET -	localhost:8080/url/statistic/test	<br />
+			-response	<br />
+			{	<br />
+			    "http://www.infobip.com": 1,	<br />
+			    "http://www.google.com": 2,	<br />
+			    "http://www.stackoverflow.com": 1	<br />
+			}	<br />
+	<h3>Swagger</h3>
+	<p>
+		1. Popis svih endpointova mozete naci na:
+			http://localhost:8080/swagger-ui.html <br /> 
+		
+	</p>
+	
+	
+</body>
+</html>
